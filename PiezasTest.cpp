@@ -14,11 +14,10 @@ class PiezasTest : public ::testing::Test
 		virtual void TearDown(){} //clean up after each test, (before destructor) 
 };
 
-TEST(PiezasTest, sanityCheck)
+TEST(PiezasTest, dropPieceTest)
 {
-    Piezas PiezasTest;
-    PiezasTest.reset();
-	ASSERT_EQ(PiezasTest.dropPiece(1), X);
+    Piezas piezasTest;
+	ASSERT_EQ(piezasTest.dropPiece(0), X);
     //ASSERT_EQ(PiezasTest.dropPiece(0), O);
     //ASSERT_EQ(PiezasTest.pieceAt(0, 1), X);
     //ASSERT_EQ(PiezasTest.pieceAt(0, 0), O);
