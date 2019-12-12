@@ -130,14 +130,16 @@ Piece Piezas::gameState()
             if (board[i][j] == X) {
                 if (board[i][j] == board[i][j+1]) {
                     count_x++;
+                    count_o = 0;
                     if (count_x > max_adj_pieces_x) {
                         max_adj_pieces_x = count_x;
                     }
                 }
             }
-            else if (board[i][j] == O) {
+            if (board[i][j] == O) {
                 if (board[i][j] == board[i][j+1]) {
                     count_o++;
+                    count_x = 0;
                     if (count_o > max_adj_pieces_o) {
                         max_adj_pieces_o = count_o;
                     }
