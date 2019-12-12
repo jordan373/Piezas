@@ -152,17 +152,20 @@ Piece Piezas::gameState()
     for (j = 0; j < BOARD_COLS; j++) {
         if (board[0][j] == X) {
             count_x++;
+            count_o = 0;
             if (count_x > max_adj_pieces_x) {
                 max_adj_pieces_x = count_x;
             }
             if(board[0][j] == board[1][j]) {
                 count_x++;
+                count_o = 0;
                 if (count_x > max_adj_pieces_x) {
                     max_adj_pieces_x = count_x;
                 }
             }
             if (board[1][j] == board[2][j]) {
                 count_x++;
+                count_o = 0;
                 if (count_x > max_adj_pieces_x) {
                     max_adj_pieces_x = count_x;
                 }
@@ -171,17 +174,20 @@ Piece Piezas::gameState()
         }
         else if (board[0][j] == O) {
             count_o++;
+            count_x = 0;
             if (count_o > max_adj_pieces_o) {
                 max_adj_pieces_o = count_o;
             }
             if(board[0][j] == board[1][j]) {
                 count_o++;
+                count_x = 0;
                 if (count_o > max_adj_pieces_o) {
                     max_adj_pieces_o = count_o;
                 }
             }
             if (board[1][j] == board[2][j]) {
                 count_o++;
+                count_x = 0;
                 if (count_o > max_adj_pieces_o) {
                     max_adj_pieces_o = count_o;
                 }
