@@ -47,4 +47,15 @@ TEST(PiezasTest, pieceAtTest)
     ASSERT_EQ(piezasTest.pieceAt(2, 3), Blank);
 }
 
+TEST(PiezasTest, gameStateTestTie)
+{
+Piezas piezasTest;
+ASSERT_EQ(piezasTest.dropPiece(0), X);
+ASSERT_EQ(piezasTest.dropPiece(1), O);
+ASSERT_EQ(piezasTest.dropPiece(2), X);
+ASSERT_EQ(piezasTest.dropPiece(3), O);
+ASSERT_EQ(piezasTest.gameState(), Invalid);
+
+}
+
 

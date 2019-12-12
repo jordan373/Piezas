@@ -39,7 +39,15 @@ Piezas::Piezas()
 **/
 void Piezas::reset()
 {
-
+    turn = X;
+    for (int i = 0; i < BOARD_ROWS; i++) {
+        auto pos = board.begin();
+        std::vector<Piece > pieceVector;
+        for (int j = 0; j < BOARD_COLS; j++) {
+            pieceVector.push_back(Blank);
+        }
+        board.insert(pos, pieceVector);
+    }
 }
 
 /**
