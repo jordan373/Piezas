@@ -16,5 +16,9 @@ class PiezasTest : public ::testing::Test
 
 TEST(PiezasTest, sanityCheck)
 {
-	ASSERT_TRUE(true);
+    Piezas PiezasTest;
+	ASSERT_EQ(PiezasTest.dropPiece(1), X);
+    ASSERT_EQ(PiezasTest.dropPiece(0), O);
+    ASSERT_EQ(PiezasTest.pieceAt(0, 1), X);
+    ASSERT_EQ(PiezasTest.pieceAt(0, 0), O);
 }

@@ -22,6 +22,12 @@
 **/
 Piezas::Piezas()
 {
+    turn = X;
+    for (int i = 0; i < BOARD_ROWS; i++) {
+        for (int j = 0; j > BOARD_COLS; j++) {
+            board[i][j] = Blank;
+        }
+    }
 }
 
 /**
@@ -30,6 +36,12 @@ Piezas::Piezas()
 **/
 void Piezas::reset()
 {
+    turn = X;
+    for (int i = 0; i < BOARD_ROWS; i++) {
+        for (int j = 0; j > BOARD_COLS; j++) {
+            board[i][j] = Blank;
+        }
+    }
 }
 
 /**
@@ -42,7 +54,24 @@ void Piezas::reset()
 **/ 
 Piece Piezas::dropPiece(int column)
 {
-    return Blank;
+    if (column < BOARD_COLS && column >= 0) {
+        for (int i = BOARD_ROWS; i <= 1; i--) {
+            if (board[i][column] == Blank) {
+                board[i][column] = turn;
+                if(turn == X) {
+                    turn = O;
+                }
+                else {
+                    turn = X;
+                }
+                return board[i][column];
+            }
+            else if (i == 0 && board[i][column] != Blank) {
+                return Blank;
+            }
+        }
+    }
+    return Invalid;
 }
 
 /**
@@ -51,7 +80,15 @@ Piece Piezas::dropPiece(int column)
 **/
 Piece Piezas::pieceAt(int row, int column)
 {
-    return Blank;
+    if (row >= BOARD_ROWS || row < 0 || column >= BOARD_COLS || column < 0) {
+        return Invalid;
+    }
+    else if (board[row][column] != Blank) {
+        return board[row][column];
+    }
+    else {
+        return Blank;
+    }
 }
 
 /**
@@ -65,5 +102,59 @@ Piece Piezas::pieceAt(int row, int column)
 **/
 Piece Piezas::gameState()
 {
-    return Blank;
+    int count_x = 0;
+    int count_o = 0;
+    int max_adj_pieces_x = 0;
+    int max_adj_pieces_o = 0;
+    int i;
+    int j;
+
+    for (i = 0; i < BOARD_ROWS; i++) {
+        for (j = 0; j < BOARD_COLS; j++) {
+            if (board[i][j] == Blank) {
+                return Invalid;
+            }
+        }
+    }
+
+    for (i = 0; i < BOARD_ROWS; i++) {
+        for (j = 0; j < BOARD_COLS - 1; j++) {
+            if (board[i][j] == board[i][j+1] && board[i][j] == X) {
+                count_x++;
+                if (count_x > max_adj_pieces_x) {
+                    max_adj_pieces_x = count_x;
+                }
+            }
+            else if (board[i][j] == board[i][j+1] && board[i][j] == O) {
+                count_o++;
+                if (count_o > max_adj_pieces_o) {
+                    max_adj_pieces_o = count_o;
+                }
+            }
+        }
+    }
+    for (i = 0; i < BOARD_COLS; i++) {
+        for (j = 0; j < BOARD_ROWS - 1; j++) {
+            if (board[i][j] == board[i][j+1] && board[i][j] == X) {
+                count_x++;
+                if (count_x > max_adj_pieces_x) {
+                    max_adj_pieces_x = count_x;
+                }
+            }
+            else if (board[i][j] == board[i][j+1] && board[i][j] == O) {
+                count_o++;
+                if (count_o > max_adj_pieces_o) {
+                    max_adj_pieces_o = count_o;
+                }
+            }
+        }
+    }
+
+    if (max_adj_pieces_x > max_adj_pieces_o) {
+        return X;
+    } else if (max_adj_pieces_o > max_adj_pieces_x) {
+        return O;
+    } else {
+        return Blank;
+    }
 }
