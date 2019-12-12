@@ -27,6 +27,15 @@ TEST(PiezasTest, dropPieceTest)
     ASSERT_EQ(piezasTest.dropPiece(4), Invalid);
 }
 
+TEST(PiezasTest, boardCoords)
+{
+    Piezas piezasTest;
+    ASSERT_EQ(piezasTest.dropPiece(2), X);
+    ASSERT_EQ(piezasTest.dropPiece(2), O);
+    ASSERT_EQ(piezasTest.pieceAt(0, 2), X);
+    ASSERT_EQ(piezasTest.pieceAt(1, 2), O);
+}
+
 TEST(PiezasTest, pieceAtTest)
 {
     Piezas piezasTest;
