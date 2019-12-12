@@ -23,12 +23,12 @@
 Piezas::Piezas()
 {
     turn = X;
-    for (int i = BOARD_ROWS - 1; i >= 0; i--) {
-        std::vector<Piece > pieceVector;
+    for (int i = BOARD_ROWS-1; i >= 0; i--) {
+        std::vector<Piece > pieceVector[i];
         for (int j = 0; j < BOARD_ROWS; j++) {
-            pieceVector.push_back(Blank);
+            pieceVector[i].push_back(Blank);
         }
-        board.push_back(pieceVector);
+        board.push_back(pieceVector[i]);
     }
 }
 
