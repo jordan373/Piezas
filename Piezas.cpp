@@ -136,7 +136,7 @@ Piece Piezas::gameState()
                     }
                 }
             }
-            if (board[i][j] == O) {
+            else if (board[i][j] == O) {
                 if (board[i][j] == board[i][j+1]) {
                     count_o++;
                     count_x = 0;
