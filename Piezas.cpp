@@ -26,7 +26,7 @@ Piezas::Piezas()
     for (int i = 0; i < BOARD_ROWS; i++) {
         auto pos = board.begin();
         std::vector<Piece > pieceVector;
-        for (int j = 0; j < BOARD_ROWS; j++) {
+        for (int j = 0; j < BOARD_COLS; j++) {
             pieceVector.push_back(Blank);
         }
         board.insert(pos, pieceVector);

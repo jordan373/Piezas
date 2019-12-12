@@ -25,7 +25,6 @@ TEST(PiezasTest, dropPieceTest)
     ASSERT_EQ(piezasTest.dropPiece(0), O);
     ASSERT_EQ(piezasTest.dropPiece(0), Blank);
     ASSERT_EQ(piezasTest.dropPiece(4), Invalid);
-    ASSERT_EQ(piezasTest.dropPiece(3), X);
 }
 
 TEST(PiezasTest, pieceAtTest)
@@ -37,9 +36,13 @@ TEST(PiezasTest, pieceAtTest)
     ASSERT_EQ(piezasTest.dropPiece(2), O);
     ASSERT_EQ(piezasTest.dropPiece(1), X);
     ASSERT_EQ(piezasTest.dropPiece(0), O);
+    ASSERT_EQ(piezasTest.dropPiece(3), X);
+    ASSERT_EQ(piezasTest.dropPiece(3), O);
     ASSERT_EQ(piezasTest.pieceAt(0, 0), X);
     ASSERT_EQ(piezasTest.pieceAt(0, 2), O);
     ASSERT_EQ(piezasTest.pieceAt(1, 1), X);
+    ASSERT_EQ(piezasTest.pieceAt(0, 3), X);
+    ASSERT_EQ(piezasTest.pieceAt(1, 3), O);
     ASSERT_EQ(piezasTest.pieceAt(5, 5), Invalid);
     ASSERT_EQ(piezasTest.pieceAt(2, 3), Blank);
 }
