@@ -140,14 +140,14 @@ Piece Piezas::gameState()
         }
     }
     for (i = 0; i < BOARD_COLS; i++) {
-        for (j = 0; j < BOARD_ROWS - 1; j++) {
-            if (board[i][j] == board[i][j+1] && board[i][j] == X) {
+        for (j = 0; j < BOARD_ROWS; j++) {
+            if ( board[i][j] == X) {
                 count_x++;
                 if (count_x > max_adj_pieces_x) {
                     max_adj_pieces_x = count_x;
                 }
             }
-            else if (board[i][j] == board[i][j+1] && board[i][j] == O) {
+            else if (board[i][j] == O) {
                 count_o++;
                 if (count_o > max_adj_pieces_o) {
                     max_adj_pieces_o = count_o;
