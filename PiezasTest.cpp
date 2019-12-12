@@ -55,7 +55,15 @@ ASSERT_EQ(piezasTest.dropPiece(1), O);
 ASSERT_EQ(piezasTest.dropPiece(2), X);
 ASSERT_EQ(piezasTest.dropPiece(3), O);
 ASSERT_EQ(piezasTest.gameState(), Invalid);
-
+ASSERT_EQ(piezasTest.dropPiece(0), X);
+ASSERT_EQ(piezasTest.dropPiece(0), O);
+ASSERT_EQ(piezasTest.dropPiece(1), X);
+ASSERT_EQ(piezasTest.dropPiece(1), O);
+ASSERT_EQ(piezasTest.dropPiece(2), X);
+ASSERT_EQ(piezasTest.dropPiece(2), O);
+ASSERT_EQ(piezasTest.dropPiece(3), X);
+ASSERT_EQ(piezasTest.dropPiece(3), O);
+ASSERT_EQ(piezasTest.gameState(), Blank);
 }
 
 
