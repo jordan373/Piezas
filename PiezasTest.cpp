@@ -109,7 +109,7 @@ ASSERT_EQ(piezasTest.dropPiece(0), O);
 ASSERT_EQ(piezasTest.dropPiece(0), X);
 ASSERT_EQ(piezasTest.gameState(), Invalid);
 }
-
+//reset
 TEST(PiezasTest, resetGameTest)
 {
 Piezas piezasTest;
