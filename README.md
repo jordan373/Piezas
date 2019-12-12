@@ -1,5 +1,9 @@
 # Piezas
 
+[![Build Status](https://travis-ci.org/jordan373/Piezas.svg?branch=master)](https://travis-ci.org/jordan373/Piezas)
+
+[![Coverage Status](https://coveralls.io/repos/github/jordan373/Piezas/badge.svg?branch=master)](https://coveralls.io/github/jordan373/Piezas?branch=master)
+
 ## Associated Enumerated Types
 `Piece` has four possible values: `X`,`O`,`Invalid`, and `Blank`
 
