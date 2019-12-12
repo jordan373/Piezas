@@ -66,7 +66,7 @@ Piece Piezas::dropPiece(int column)
                 }
                 return board[i][column];
             }
-            else if (i == 0 && board[i][column] != Blank) {
+            else if (i == (BOARD_ROWS - 1) && board[i][column] != Blank) {
                 return Blank;
             }
         }
