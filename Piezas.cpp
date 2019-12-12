@@ -55,7 +55,7 @@ void Piezas::reset()
 Piece Piezas::dropPiece(int column)
 {
     if (column < BOARD_COLS && column >= 0) {
-        for (int i = BOARD_ROWS; i <= 1; i--) {
+        for (int i = 0; i <= BOARD_ROWS - 1; i++) {
             if (board[i][column] == Blank) {
                 board[i][column] = turn;
                 if(turn == X) {
