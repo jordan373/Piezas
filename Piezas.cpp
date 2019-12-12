@@ -124,6 +124,8 @@ Piece Piezas::gameState()
     }
 
     for (i = 0; i < BOARD_ROWS; i++) {
+        count_x = 0;
+        count_o = 0;
         for (j = 0; j < BOARD_COLS - 1; j++) {
             if (board[i][j] == board[i][j+1] && board[i][j] == X) {
                 count_x++;
@@ -139,19 +141,45 @@ Piece Piezas::gameState()
             }
         }
     }
-    for (i = 0; i < BOARD_COLS; i++) {
-        for (j = 0; j < BOARD_ROWS; j++) {
-            if ( board[i][j] == X) {
+    for (i = 0; i < BOARD_ROWS; i++) {
+        for (j = 0; j < BOARD_COLS; j++) {
+            if (board[i][j] == X) {
                 count_x++;
                 if (count_x > max_adj_pieces_x) {
                     max_adj_pieces_x = count_x;
                 }
+                if(board[i][j] == board[i+1][j]) {
+                    count_x++;
+                    if (count_x > max_adj_pieces_x) {
+                        max_adj_pieces_x = count_x;
+                    }
+                }
+                if (board[i+1][j] == board[i+2][j]) {
+                    count_x++;
+                    if (count_x > max_adj_pieces_x) {
+                        max_adj_pieces_x = count_x;
+                    }
+                }
+                count_x = 0;
             }
             else if (board[i][j] == O) {
                 count_o++;
                 if (count_o > max_adj_pieces_o) {
                     max_adj_pieces_o = count_o;
                 }
+                if(board[i][j] == board[i+1][j]) {
+                    count_o++;
+                    if (count_o > max_adj_pieces_o) {
+                        max_adj_pieces_o = count_o;
+                    }
+                }
+                if (board[i+1][j] == board[i+2][j]) {
+                    count_o++;
+                    if (count_o > max_adj_pieces_o) {
+                        max_adj_pieces_o = count_o;
+                    }
+                }
+                count_o = 0;
             }
         }
     }
