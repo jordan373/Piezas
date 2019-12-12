@@ -22,12 +22,14 @@
 **/
 Piezas::Piezas()
 {
-//    turn = X;
-//    for (int i = 0; i < BOARD_ROWS; i++) {
-//        for (int j = 0; j < BOARD_COLS; j++) {
-//            board[i][j] = Blank;
-//        }
-//    }
+    turn = X;
+    for (int i = 0; i < BOARD_ROWS; i++) {
+        std::vector<Piece > pieceVector;
+        for (int j = 0; j < BOARD_ROWS; j++) {
+            pieceVector.push_back(Blank);
+        }
+        board.push_back(pieceVector);
+    }
 }
 
 /**
@@ -36,12 +38,7 @@ Piezas::Piezas()
 **/
 void Piezas::reset()
 {
-    turn = X;
-    for (int i = 0; i < BOARD_ROWS; i++) {
-        for (int j = 0; j < BOARD_COLS; j++) {
-            board[i][j] = Blank;
-        }
-    }
+
 }
 
 /**
