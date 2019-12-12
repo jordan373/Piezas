@@ -24,7 +24,7 @@ Piezas::Piezas()
 {
     turn = X;
     for (int i = BOARD_ROWS - 1; i >= 0; i--) {
-        for (int j = 0; j > BOARD_COLS; j++) {
+        for (int j = 0; j < BOARD_COLS; j++) {
             board[i][j] = Blank;
         }
     }
@@ -38,7 +38,7 @@ void Piezas::reset()
 {
     turn = X;
     for (int i = BOARD_ROWS - 1; i >= 0; i--) {
-        for (int j = 0; j > BOARD_COLS; j++) {
+        for (int j = 0; j < BOARD_COLS; j++) {
             board[i][j] = Blank;
         }
     }
