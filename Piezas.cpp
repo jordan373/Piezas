@@ -23,13 +23,13 @@
 Piezas::Piezas()
 {
     turn = X;
-    std::vector<Piece > pieceVector[BOARD_ROWS-1];
-    for (int i = BOARD_ROWS-1; i >= 0; i--) {
-        //std::vector<Piece > pieceVector[i];
+    for (int i = 0; i < BOARD_ROWS; i++) {
+        auto pos = board.begin();
+        std::vector<Piece > pieceVector;
         for (int j = 0; j < BOARD_ROWS; j++) {
-            pieceVector[i].push_back(Blank);
+            pieceVector.push_back(Blank);
         }
-        board.push_back(pieceVector[i]);
+        board.insert(pos, pieceVector);
     }
 }
 
