@@ -19,6 +19,10 @@ TEST(PiezasTest, dropPieceTest)
     Piezas piezasTest;
 	ASSERT_EQ(piezasTest.dropPiece(0), X);
     ASSERT_EQ(piezasTest.dropPiece(0), O);
-    //ASSERT_EQ(piezasTest.pieceAt(0, 1), X);
-    //ASSERT_EQ(piezasTest.pieceAt(0, 0), O);
+    ASSERT_EQ(piezasTest.dropPiece(1), X);
+    ASSERT_EQ(piezasTest.dropPiece(2), O);
+    ASSERT_EQ(piezasTest.dropPiece(1), X);
+    ASSERT_EQ(piezasTest.dropPiece(0), O);
+    ASSERT_EQ(piezasTest.dropPiece(0), Blank);
+    ASSERT_EQ(piezasTest.dropPiece(4), Invalid);
 }
