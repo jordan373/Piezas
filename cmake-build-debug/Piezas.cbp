@@ -91,9 +91,6 @@
 		<Unit filename="/Users/jordan/Piezas/Piezas.h">
 			<Option target="Piezas"/>
 		</Unit>
-		<Unit filename="/Users/jordan/Piezas/PiezasTest.cpp">
-			<Option target="Piezas"/>
-		</Unit>
 		<Unit filename="/Users/jordan/Piezas/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

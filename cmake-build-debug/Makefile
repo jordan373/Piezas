@@ -150,33 +150,6 @@ Piezas.cpp.s:
 	$(MAKE) -f CMakeFiles/Piezas.dir/build.make CMakeFiles/Piezas.dir/Piezas.cpp.s
 .PHONY : Piezas.cpp.s
 
-PiezasTest.o: PiezasTest.cpp.o
-
-.PHONY : PiezasTest.o
-
-# target to build an object file
-PiezasTest.cpp.o:
-	$(MAKE) -f CMakeFiles/Piezas.dir/build.make CMakeFiles/Piezas.dir/PiezasTest.cpp.o
-.PHONY : PiezasTest.cpp.o
-
-PiezasTest.i: PiezasTest.cpp.i
-
-.PHONY : PiezasTest.i
-
-# target to preprocess a source file
-PiezasTest.cpp.i:
-	$(MAKE) -f CMakeFiles/Piezas.dir/build.make CMakeFiles/Piezas.dir/PiezasTest.cpp.i
-.PHONY : PiezasTest.cpp.i
-
-PiezasTest.s: PiezasTest.cpp.s
-
-.PHONY : PiezasTest.s
-
-# target to generate assembly for a file
-PiezasTest.cpp.s:
-	$(MAKE) -f CMakeFiles/Piezas.dir/build.make CMakeFiles/Piezas.dir/PiezasTest.cpp.s
-.PHONY : PiezasTest.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -189,9 +162,6 @@ help:
 	@echo "... Piezas.o"
 	@echo "... Piezas.i"
 	@echo "... Piezas.s"
-	@echo "... PiezasTest.o"
-	@echo "... PiezasTest.i"
-	@echo "... PiezasTest.s"
 .PHONY : help
 
 

@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/jordan/Piezas/Piezas.cpp
+Piezas.h
+/Users/jordan/Piezas/Piezas.h
+vector
+-
+iostream
+-
+cstdlib
+-
+
+/Users/jordan/Piezas/Piezas.h
+vector
+-
+

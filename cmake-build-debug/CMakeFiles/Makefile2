@@ -74,12 +74,12 @@ preinstall:
 CMakeFiles/Piezas.dir/all:
 	$(MAKE) -f CMakeFiles/Piezas.dir/build.make CMakeFiles/Piezas.dir/depend
 	$(MAKE) -f CMakeFiles/Piezas.dir/build.make CMakeFiles/Piezas.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jordan/Piezas/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target Piezas"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jordan/Piezas/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target Piezas"
 .PHONY : CMakeFiles/Piezas.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Piezas.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jordan/Piezas/cmake-build-debug/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jordan/Piezas/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Piezas.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jordan/Piezas/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/Piezas.dir/rule

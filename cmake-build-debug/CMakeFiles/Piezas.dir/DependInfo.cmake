@@ -5,7 +5,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/jordan/Piezas/Piezas.cpp" "/Users/jordan/Piezas/cmake-build-debug/CMakeFiles/Piezas.dir/Piezas.cpp.o"
-  "/Users/jordan/Piezas/PiezasTest.cpp" "/Users/jordan/Piezas/cmake-build-debug/CMakeFiles/Piezas.dir/PiezasTest.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
