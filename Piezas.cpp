@@ -23,7 +23,7 @@
 Piezas::Piezas()
 {
     turn = X;
-    for (int i = 0; i < BOARD_ROWS; i++) {
+    for (int i = BOARD_ROWS - 1; i >= 0; i--) {
         for (int j = 0; j > BOARD_COLS; j++) {
             board[i][j] = Blank;
         }
@@ -37,7 +37,7 @@ Piezas::Piezas()
 void Piezas::reset()
 {
     turn = X;
-    for (int i = 0; i < BOARD_ROWS; i++) {
+    for (int i = BOARD_ROWS - 1; i >= 0; i--) {
         for (int j = 0; j > BOARD_COLS; j++) {
             board[i][j] = Blank;
         }
@@ -54,25 +54,24 @@ void Piezas::reset()
 **/ 
 Piece Piezas::dropPiece(int column)
 {
-    return X;
-//    if (column < BOARD_COLS && column >= 0) {
-//        for (int i = 0; i <= BOARD_ROWS - 1; i++) {
-//            if (board[i][column] == Blank) {
-//                board[i][column] = turn;
-//                if(turn == X) {
-//                    turn = O;
-//                }
-//                else {
-//                    turn = X;
-//                }
-//                return board[i][column];
-//            }
-//            else if (i == (BOARD_ROWS - 1) && board[i][column] != Blank) {
-//                return Blank;
-//            }
-//        }
-//    }
-//    return Invalid;
+    if (column < BOARD_COLS && column >= 0) {
+        for (int i = 0; i <= BOARD_ROWS - 1; i++) {
+            if (board[i][column] == Blank) {
+                board[i][column] = turn;
+                if(turn == X) {
+                    turn = O;
+                }
+                else {
+                    turn = X;
+                }
+                return board[i][column];
+            }
+            else if (i == (BOARD_ROWS - 1) && board[i][column] != Blank) {
+                return Blank;
+            }
+        }
+    }
+    return Invalid;
 }
 
 /**
